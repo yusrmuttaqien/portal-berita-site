@@ -10,10 +10,13 @@ Mini Portal Berita is a lightweight news portal application built with the Larav
 
 Key features include:
 - News article management
-- Clean and responsive user interface
 - Admin panel for content management
 - Search and categorization functionality
 - User authentication and authorization
+
+## Academic Context
+
+This project was developed as part of Tugas Kelompok ke-3 (Group Assignment #3) for Advanced in Data and Information Management course at Binus Online.
 
 ## How To Get Started
 
