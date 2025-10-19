@@ -6,16 +6,102 @@
 
 ## About This Project
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Mini Portal Berita is a lightweight news portal application built with the Laravel framework. This application serves as a simple platform for publishing and managing news articles with a clean, user-friendly interface. The project demonstrates modern web development practices using Laravel.
+
+Key features include:
+- News article management
+- Clean and responsive user interface
+- Admin panel for content management
+- Search and categorization functionality
+- User authentication and authorization
 
 ## How To Get Started
+
+### Prerequisites
+- PHP 8.2 or higher
+- Composer (PHP dependency manager)
+- Node.js and npm (for frontend assets)
+- SQLite, MySQL, or PostgreSQL database
+
+### Installation Steps
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/mini-portal-berita.git
+   cd mini-portal-berita
+   ```
+
+2. **Install PHP dependencies**
+   ```bash
+   composer install
+   ```
+
+3. **Set up environment variables**
+   ```bash
+   cp .env.example .env
+   ```
+
+4. **Generate application key**
+   ```bash
+   php artisan key:generate
+   ```
+
+5. **Configure database**
+   By default, the application uses SQLite. Create an empty database file:
+   ```bash
+   touch database/database.sqlite
+   ```
+   
+   Or update the `.env` file with your preferred database configuration (MySQL/PostgreSQL).
+
+6. **Run database migrations**
+   ```bash
+   php artisan migrate --seed
+   ```
+
+7. **Install and build frontend assets**
+   ```bash
+   npm install
+   npm run build
+   ```
+
+8. **Start the development server**
+   ```bash
+   php artisan serve
+   ```
+
+9. **Run the development command (with concurrent processes)**
+   ```bash
+   # In a separate terminal, run:
+   composer run dev
+   ```
+
+10. **Access the application**
+    Open your browser and go to `http://localhost:8000`
+
+### Alternative Setup Command
+You can also use the setup script to perform all installation steps at once:
+```bash
+composer run setup
+```
+
+### Additional Notes
+- The default database connection uses SQLite for easy setup
+- Admin credentials are created during seeding if you use the `--seed` flag
+- The application uses Laravel's built-in authentication system
+- Frontend assets are built using Vite and Tailwind CSS
 
 
 
 ## Credits
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- 2702386314 - STEVANUS PRASETYOKO
+- 2702372486 - IMELDA ZAHWA ARACELLA
+- 2702363885 - AIZAR RAHIMA SUPRAYITNO
+- 2702349666 - YUSRIL DHIYAUL HAQ MUTTAQIEN
+- 2702386245 - ZAHRATUL UYUN
+
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+[MIT license](https://opensource.org/licenses/MIT).
