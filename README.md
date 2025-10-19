@@ -16,7 +16,7 @@ Key features include:
 
 ## Academic Context
 
-This project was developed as part of Tugas Kelompok ke-3 (Group Assignment #3) for Advanced in Data and Information Management course at Binus Online.
+This project was developed as part of Team Assignment 3 for Advanced in Data and Information Management course at Binus Online.
 
 ## How To Get Started
 
@@ -96,7 +96,7 @@ composer run setup
 
 
 
-## Credits
+## Credits Group 3 - SBBF
 
 - 2702386314 - STEVANUS PRASETYOKO
 - 2702372486 - IMELDA ZAHWA ARACELLA
