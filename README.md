@@ -28,9 +28,25 @@ This project was developed as part of Team Assignment 3 for Advanced in Data and
 
 ### Installation Steps
 
+0. **Fork the repository (optional)**
+
 1. **Clone the repository**
+
+   if forked:
+
    ```bash
    git clone https://github.com/your-username/mini-portal-berita.git
+   ```
+
+   if not:
+
+   ```bash
+   https://github.com/yusrmuttaqien/portal-berita-site.git
+   ```
+
+   then:
+
+   ```bash
    cd mini-portal-berita
    ```
 
