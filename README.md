@@ -84,33 +84,44 @@ This project was developed as part of Team Assignment 3 for Advanced in Data and
    npm run build
    ```
 
-8. **Start the development server**
+8. **Create storage symlink for file access**
+   ```bash
+   php artisan storage:link
+   ```
+   
+   This step is required to make uploaded files (like article thumbnails) accessible via web requests.
+
+9. **Start the project**
+
+   For viewing:
+
    ```bash
    php artisan serve
    ```
 
-9. **Run the development command (with concurrent processes)**
-   ```bash
-   # In a separate terminal, run:
-   composer run dev
-   ```
+   For development:
 
-10. **Access the application**
+    ```bash
+    composer run dev
+    ```
+
+11. **Access the application**
     Open your browser and go to `http://localhost:8000`
 
 ### Alternative Setup Command
 You can also use the setup script to perform all installation steps at once:
+
 ```bash
 composer run setup
 ```
 
+then continue from `step 9`.
+
 ### Additional Notes
 - The default database connection uses SQLite for easy setup
-- Admin credentials are created during seeding if you use the `--seed` flag
+- Admin credentials are created during seeding
 - The application uses Laravel's built-in authentication system
 - Frontend assets are built using Vite and Tailwind CSS
-
-
 
 ## Credits Group 3 - SBBF
 
@@ -119,7 +130,6 @@ composer run setup
 - 2702363885 - AIZAR RAHIMA SUPRAYITNO
 - 2702386245 - ZAHRATUL UYUN
 - 2702349666 - YUSRIL DHIYAUL HAQ MUTTAQIEN
-
 
 ## License
 
