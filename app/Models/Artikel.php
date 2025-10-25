@@ -14,6 +14,8 @@ class Artikel extends Model
     protected $fillable = [
         'judul',
         'slug',
+        'kategori_id',
+        'penulis_id',
         'kategori',
         'penulis',
         'foto',
@@ -27,4 +29,14 @@ class Artikel extends Model
     protected $casts = [
         'tanggal_terbit' => 'datetime',
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'kategori_id', 'id_kategori');
+    }
+
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'penulis_id');
+    }
 }
