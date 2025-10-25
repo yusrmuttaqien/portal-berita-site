@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use App\Models\Artikel;
 use App\Models\Category;
 use App\Models\User;
+use Illuminate\Support\Facades\File;
 
 class ArtikelSeeder extends Seeder
 {
@@ -20,6 +21,30 @@ class ArtikelSeeder extends Seeder
 
         // Ambil ID penulis (role_id = 4)
         $penulisIds = User::where('role_id', 4)->pluck('id')->toArray();
+
+        // Ensure the artikel directory exists in storage
+        $storageArtikelDir = storage_path('app/public/artikel');
+        if (!File::exists($storageArtikelDir)) {
+            File::makeDirectory($storageArtikelDir, 0755, true);
+        }
+
+        // Move all files from database/images/artikel to storage/app/public/artikel
+        $sourceDir = database_path('images/artikel');
+        $destinationDir = $storageArtikelDir;
+
+        if (File::exists($sourceDir)) {
+            $files = File::allFiles($sourceDir);
+            foreach ($files as $file) {
+                $fileName = $file->getFilename();
+                $sourcePath = $sourceDir . '/' . $fileName;
+                $destinationPath = $destinationDir . '/' . $fileName;
+                
+                // Only move if the destination file doesn't already exist
+                if (!File::exists($destinationPath)) {
+                    File::copy($sourcePath, $destinationPath);
+                }
+            }
+        }
 
         $artikelData = [
             [
